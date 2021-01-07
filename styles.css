@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #24272E;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #25272E;
+    text-align:center;
+    font-family: Asap, sans-serif;
+}
+
+.students {
+    margin: 20px ;
+    border: 2px solid white;
+    width: 200px;
+    color: white;
+    text-align:center;
+    font-family: Asap, sans-serif;
+}
+
+.ra {
+    padding: 2px;
+}
+
+.calculate {
+    background: white;
+    width: 70px;
+    text-align:center;
+    margin: 20px ;
+    font-family: Asap, sans-serif;
+}
+
+.calculate > p {
+    color: #25272E;
+}
