@@ -32,7 +32,7 @@ function compute_B0(n1,n2,n3){
 }
 
 function compute_v(n1,n2,n3){
-    v = 1+1/(n1[4]+n2[4]+n3[4])
+    v = 1+1/(1+n1[4]+n2[4]+n3[4])
     console.log("v = "+v)
     v_p.innerHTML = "v = "+ v.toExponential(2) +" m/s";
     return v
