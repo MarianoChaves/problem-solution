@@ -1,6 +1,7 @@
 <html>
 <head>
     <title> Solução Gráfica </title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="styles.css">
     <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
 </head>
@@ -30,17 +31,17 @@
         <p>Calcular</p>
     </button>
 
-    <div class = 'results' >
-        Results:
-        <p class = 'var' id = 'B0'> B₀ =  x </p>
-        <p class = 'var' id = 'v'> v  =  x </p>
-        <p class = 'var' id = 'h'> h  =  x </p>
-        <p class = 'var' id = 'b'> b  =  x </p>
-        <p class = 'var' id = 'tau'> 𝜏  =  x </p>
-    </div>
+    <div class = 'row'>
+        <div class = 'results' >
+            Results:
+            <p class = 'var' id = 'B0'> B₀ =  x </p>
+            <p class = 'var' id = 'v'> v  =  x </p>
+            <p class = 'var' id = 'h'> h  =  x </p>
+            <p class = 'var' id = 'b'> b  =  x </p>
+            <p class = 'var' id = 'tau'> 𝜏  =  x </p>
+        </div>
 
-    <div class = "figure" id = "graph">
-        <img src="fem.png" alt="">
+        <div class= "figure" id="curve_chart" style="width: 500px; height: 300px"></div>
     </div>
 
     <script src="app.js" charset="utf-8"></script>
