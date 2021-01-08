@@ -26,14 +26,16 @@ function compute_B0(n1,n2,n3){
 }
 
 function compute_v(n1,n2,n3){
-    v = 1/(n1[1]*n1[1]+n2[1]*n2[1]+n3[1]*n3[1])
+    v = 1/(1+n1[4]+n2[4]+n3[4])
+    console.log("v = "+v)
     v_p.innerHTML = "v = "+ v +" m/s";
     return v
 }
 
 function compute_t(n1,n2,n3){
-    t = (n1[2]*n1[2]+n2[2]*n2[2]+n3[2]*n3[2])
+    t = (n1[5]*n1[5]+n2[5]*n2[5]+n3[5]*n3[5]+1)
     t_p.innerHTML = "𝜏 = "+t+" s"
+    console.log("𝜏 = "+t)
     return t
 }
 
@@ -78,29 +80,27 @@ function exp(x){
 }
 
 function fem_calc(x){
-    if(x<1/*h/v*/){
-        return -(x**2-2*x)*exp(-x)
-        //return -B0*b*v**2/(2*h*t)*(x**2-2*t*x)*exp(-x/t)
+    if(x<h/v){
+        //return -(x**2-2*x)*exp(-x)
+        return -B0*b*v**2/(2*h*t)*(x**2-2*t*x)*exp(-x/t)
     }
     else{
-        return exp(-x)
-        //return B0*b*h/(2*t)*exp(-x/t)
+        //return exp(-x)
+        return B0*b*h/(2*t)*exp(-x/t)
     }
 }
 
 
 function plot_graph(){
     var t_init = 0;
-    var t_fin = 7;
+    var t_fin = 2*t;
+    if(t>v/h){t_fin = 2*h/v}
     var N_t = 200;
     var dt = (t_fin-t_init)/N_t;
+    console.log("h/v = "+h/v);
 
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    console.log(data[0])
-    console.log(data[1])
-    console.log(data[2])
-    console.log(data)
     function drawChart() {
         var data_aux = google.visualization.arrayToDataTable([["time (s)","ε"],[0,0]]);
 
