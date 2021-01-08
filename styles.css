@@ -64,6 +64,14 @@ header > h1 {
     padding: 2px;
 }
 
+.var {
+    margin-left: 30 px;
+    width: 120px;
+    color:white;
+    font-family: Asap, sans-serif;
+    padding: 2px;
+}
+
 .figure{
     margin: 70px;
 }
