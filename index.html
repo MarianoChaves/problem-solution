@@ -11,44 +11,39 @@
     </header>
 
 
-    <div class = "students">
-        <div id = 'ra_1' class = 'ra'>
-            RA aluno 1:
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-        </div>
-        <div id = 'ra_2' class = 'ra'>
-            RA aluno 2:
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-        </div>
-        <div id = 'ra_3' class = 'ra'>
-            RA aluno 3:
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-            <span class = 'input'> 1 </span>
-        </div>
-    </div>
+    <form class = "students">
+        <label for = "ra1"  class = 'ra'>
+            RA do aluno 1:
+        </label>
+        <input type="text" id = 'ra_1', value =""><br><br>
+        <label for = "ra2" class = 'ra'>
+            RA do aluno 2:
+        </label>
+        <input type="text" id = 'ra_2', value =""><br><br>
+        <label for = "ra3" class = 'ra'>
+            RA do aluno 3:
+        </label>
+        <input type="text" id = 'ra_3', value =""><br><br>
+    </form>
 
-    <div class = 'calculate'>
-        <p id="action">Calcular</p>
+    <button type="button" class = 'calculate' id="action">
+        <p>Calcular</p>
+    </button>
+
+    <div class = 'results' >
+        Results:
+        <p class = 'var' id = 'B0'> B₀ =  x </p>
+        <p class = 'var' id = 'v'> v  =  x </p>
+        <p class = 'var' id = 'h'> h  =  x </p>
+        <p class = 'var' id = 'b'> b  =  x </p>
+        <p class = 'var' id = 'tau'> 𝜏  =  x </p>
     </div>
 
     <div class = "figure" id = "graph">
         <img src="fem.png" alt="">
     </div>
 
+    <script src="app.js" charset="utf-8"></script>
     
 
 </body>

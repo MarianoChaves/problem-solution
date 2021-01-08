@@ -21,26 +21,49 @@ header > h1 {
 }
 
 .students {
-    margin: 20px ;
-    border: 2px solid white;
-    width: 200px;
+    margin: 10px ;
+    width: 350px;
     color: white;
     text-align:center;
     font-family: Asap, sans-serif;
+    padding: 5;
 }
 
 .ra {
     padding: 2px;
 }
 
+
 .calculate {
-    background: white;
+    background:white;
     width: 70px;
     text-align:center;
-    margin: 20px ;
+    margin-left: 25px ;
+    margin-top: 5px ;
+    margin-bottom: 5px ;
     font-family: Asap, sans-serif;
+    transition: all 0.5 ease;
+}
+
+.calculate:hover {
+    cursor: pointer;
+    background: #DEDDDD;
 }
 
 .calculate > p {
     color: #25272E;
+    padding: 3px;
+}
+
+.results {
+    margin: 30 px;
+    border: 2px solid white;
+    width: 120px;
+    color:white;
+    font-family: Asap, sans-serif;
+    padding: 2px;
+}
+
+.figure{
+    margin: 70px;
 }
