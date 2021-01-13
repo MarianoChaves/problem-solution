@@ -73,8 +73,8 @@ function setRAs(){
         ra2[i]=(+aux2.charAt(i));
     }
     var aux3 = ra3_input.value
-    for (var i = 0, len = aux2.length; i < len; i += 1) {
-        ra3[i]=(+aux2.charAt(i));
+    for (var i = 0, len = aux3.length; i < len; i += 1) {
+        ra3[i]=(+aux3.charAt(i));
     }
 }
 
