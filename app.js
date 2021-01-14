@@ -107,7 +107,7 @@ function compute_afem(){
 }
 
 function compute_bfem(){
-    bfem = bfem_calc(hv)
+    bfem = bfem_calc(2*hv)
     bfem_p.innerHTML = "(b) ε(h/v) = "+ bfem.toExponential(2) + " V";
     return bfem
 }
