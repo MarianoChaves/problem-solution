@@ -9,6 +9,7 @@ let t = 1;
 let hv = 1;
 let afem = 1;
 let bfem = 1;
+let cfem = 1;
 let data = [];
 const euler = 2.71828;
 const B0_p = document.getElementById("B0")
@@ -19,6 +20,7 @@ const t_p = document.getElementById("tau")
 const hv_p = document.getElementById("h/v")
 const afem_p = document.getElementById("fem_a")
 const bfem_p = document.getElementById("fem_b")
+const cfem_p = document.getElementById("fem_c")
 const ra1_input = document.getElementById("ra_1")
 const ra2_input = document.getElementById("ra_2")
 const ra3_input = document.getElementById("ra_3")
@@ -89,6 +91,7 @@ function bfem_calc(x){
     return B0*b*h/(2*t)*exp(-x/t)
 }
 
+
 function fem_calc(x){
     if(x<=hv){
         return afem_calc(x)
@@ -112,6 +115,12 @@ function compute_bfem(){
     return bfem
 }
 
+function compute_cfem(){
+    cfem = bfem_calc(hv)
+    cfem_p.innerHTML = "    ε(h/v) = "+ cfem.toExponential(2) + " V";
+    return cfem
+}
+
 function calculate_values(n1,n2,n3){
     compute_B0(n1,n2,n3);
     compute_h(n1,n2,n3);
@@ -121,6 +130,7 @@ function calculate_values(n1,n2,n3){
     compute_hv(n1,n2,n3);
     compute_afem();
     compute_bfem();
+    compute_cfem();
 }
 
 function plot_graph(){
